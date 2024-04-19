@@ -1,6 +1,6 @@
 library swipe_cards;
 
-import 'package:drinking_game/card_swipe/profile_card.dart';
+import 'package:drinkalot/card_swipe/profile_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

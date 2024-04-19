@@ -1,4 +1,4 @@
-package com.example.drinking_game
+package br.com.erbse.drinkalot
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,4 +1,4 @@
-# drinking_game
+# Drinkalot
 
 A new Flutter project.
 

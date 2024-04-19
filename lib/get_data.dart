@@ -1,4 +1,4 @@
-import 'package:drinking_game/mockup.dart';
+import 'package:drinkalot/mockup.dart';
 import 'models/card.dart';
 import 'models/deck.dart';
 

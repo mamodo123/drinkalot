@@ -1,7 +1,7 @@
 import 'dart:math';
-import 'package:drinking_game/card_swipe/swipe_cards.dart';
-import 'package:drinking_game/models/card.dart';
-import 'package:drinking_game/models/deck.dart';
+import 'package:drinkalot/card_swipe/swipe_cards.dart';
+import 'package:drinkalot/models/card.dart';
+import 'package:drinkalot/models/deck.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

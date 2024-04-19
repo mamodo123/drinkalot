@@ -1,5 +1,5 @@
-import 'package:drinking_game/screens/decks_screen.dart';
-import 'package:drinking_game/screens/select_decks_screen.dart';
+import 'package:drinkalot/screens/decks_screen.dart';
+import 'package:drinkalot/screens/select_decks_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

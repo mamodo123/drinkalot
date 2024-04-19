@@ -1,8 +1,9 @@
-import 'package:drinking_game/models/card.dart';
-import 'package:drinking_game/models/deck.dart';
-import 'package:drinking_game/screens/swipe_cards_screen.dart';
+import 'package:drinkalot/models/card.dart';
+import 'package:drinkalot/models/deck.dart';
+import 'package:drinkalot/screens/swipe_cards_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../get_data.dart';
 
 class SelectDecksScreen extends StatefulWidget {

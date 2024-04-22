@@ -4,7 +4,7 @@ import 'package:drinkalot/screens/swipe_cards_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../get_data.dart';
+import '../manage_data.dart';
 
 class SelectDecksScreen extends StatefulWidget {
   const SelectDecksScreen({super.key});

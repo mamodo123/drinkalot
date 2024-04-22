@@ -2,7 +2,7 @@ import 'package:drinkalot/models/deck.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../get_data.dart';
+import '../manage_data.dart';
 import 'menu.dart';
 
 class LoadDecksScreen extends StatefulWidget {
@@ -37,8 +37,10 @@ class _LoadDecksScreenState extends State<LoadDecksScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: CircularProgressIndicator(),
+    return const Scaffold(
+      body: Center(
+        child: CircularProgressIndicator(),
+      ),
     );
   }
 }

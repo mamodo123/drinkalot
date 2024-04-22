@@ -36,3 +36,8 @@ Future<List<String>> loadPurchasedProducts(List<Deck> decks) async {
   }
   return ids;
 }
+
+Future<void> buyDeck(String code) async {
+  decks.firstWhere((element) => element.playstoreId == code).hasBought = true;
+  print(decks.firstWhere((element) => element.playstoreId == code).hasBought);
+}

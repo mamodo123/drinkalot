@@ -1,9 +1,10 @@
 import 'dart:math';
-import 'package:drinkalot/card_swipe/swipe_cards.dart';
 import 'package:drinkalot/models/card.dart';
 import 'package:drinkalot/models/deck.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../widgets/card_swipe/swipe_cards.dart';
 
 class SwipeCardsScreen extends StatefulWidget {
   const SwipeCardsScreen({super.key});

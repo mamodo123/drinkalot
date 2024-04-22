@@ -1,4 +1,4 @@
-import 'package:drinkalot/get_data.dart';
+import 'package:drinkalot/manage_data.dart';
 import 'package:flutter/cupertino.dart';
 
 class Deck {

@@ -1,37 +1,42 @@
 import 'models/card.dart';
 import 'models/deck.dart';
 
-const List<Deck> decks = [
+final List<Deck> decks = [
   Deck(
       id: 0,
       title: 'Clássicas',
       backgroundImage: 'red',
       createdByUser: false,
-      hasBought: false),
+      hasBought: true,
+      playstoreId: null),
   Deck(
       id: 1,
       title: 'Eu Nunca Picante',
       backgroundImage: 'pink',
       createdByUser: false,
-      hasBought: true),
+      hasBought: false,
+      playstoreId: 'have_i_never_spice'),
   Deck(
       id: 2,
       title: 'Para deixar muito bebado',
       backgroundImage: 'blue',
       createdByUser: false,
-      hasBought: true),
+      hasBought: false,
+      playstoreId: 'to_get_very_drunk'),
   Deck(
       id: 3,
       title: 'Sexual',
       backgroundImage: 'yellow',
       createdByUser: false,
-      hasBought: true),
+      hasBought: false,
+      playstoreId: 'sexual'),
   Deck(
       id: 4,
       title: 'Desafios de festa',
       backgroundImage: 'purple',
       createdByUser: false,
-      hasBought: true),
+      hasBought: false,
+      playstoreId: 'party_challenges'),
 ];
 
 final List<CardModel> cards = [

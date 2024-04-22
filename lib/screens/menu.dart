@@ -11,7 +11,6 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final decksNotifier = context.watch<DeckListNotifier>();
-    final decks = decksNotifier.decks;
     return Scaffold(
       body: Center(
         child: Column(

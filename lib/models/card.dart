@@ -1,5 +1,6 @@
 class CardModel {
-  final int id, deck;
+  final int? id;
+  final int deck;
   final String? title, help, imagePath;
   final String description;
 

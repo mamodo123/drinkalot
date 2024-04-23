@@ -12,7 +12,7 @@ class CodeDialog extends StatefulWidget {
 }
 
 class _CodeDialogState extends State<CodeDialog> {
-  TextEditingController textController = TextEditingController();
+  final TextEditingController textController = TextEditingController();
   bool loading = false;
 
   final codes = [

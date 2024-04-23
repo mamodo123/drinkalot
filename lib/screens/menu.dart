@@ -1,7 +1,9 @@
+import 'package:drinkalot/screens/create_card.dart';
 import 'package:drinkalot/screens/decks_screen.dart';
 import 'package:drinkalot/screens/select_decks_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../models/deck.dart';
 import '../widgets/direction_drag.dart';
 import 'code_dialog.dart';
@@ -89,6 +91,18 @@ class _MenuScreenState extends State<MenuScreen> {
                                 )));
                   },
                   child: const Text('Comprar baralhos')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                ChangeNotifierProvider<DeckListNotifier>.value(
+                                  value: decksNotifier,
+                                  child: const CreateCardScreen(),
+                                )));
+                  },
+                  child: const Text('Minhas cartas')),
             ],
           ),
         ),

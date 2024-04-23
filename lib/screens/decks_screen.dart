@@ -110,6 +110,7 @@ class _DecksScreenState extends State<DecksScreen> {
                       CarouselSlider(
                           options: CarouselOptions(
                             height: 500,
+                            enableInfiniteScroll: false,
                             onPageChanged: (index, reason) {
                               setState(() {
                                 _currentIndex = index;
@@ -136,6 +137,9 @@ class _DecksScreenState extends State<DecksScreen> {
                                   case 'purple':
                                     bg = Colors.purple;
                                     break;
+                                  case 'green':
+                                    bg = Colors.green;
+                                    break;
                                 }
                                 return AspectRatio(
                                   aspectRatio: 0.64,
@@ -161,7 +165,7 @@ class _DecksScreenState extends State<DecksScreen> {
                                           Container(
                                             decoration: BoxDecoration(
                                                 color: Colors.black
-                                                    .withOpacity(0.8),
+                                                    .withOpacity(0.4),
                                                 borderRadius:
                                                     BorderRadius.circular(20)),
                                             child: const Center(

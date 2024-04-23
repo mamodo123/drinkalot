@@ -21,8 +21,8 @@ class Deck {
       : id = json['id'],
         title = json['title'],
         backgroundImage = json['backgroundImage'],
-        createdByUser = json['createdByUser'],
-        hasBought = json['hasBought'],
+        createdByUser = json['createdByUser'] == 1,
+        hasBought = json['hasBought'] == 1,
         playstoreId = json['playstoreId'];
 
   Map<String, dynamic> toJson() => {

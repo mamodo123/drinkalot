@@ -21,7 +21,8 @@ class _LoadDecksScreenState extends State<LoadDecksScreen> {
         MaterialPageRoute(
             builder: (context) => MultiProvider(
                   providers: [
-                    ChangeNotifierProvider<DeckListNotifier>(create: (_) => DeckListNotifier(decks: decks)),
+                    ChangeNotifierProvider<DeckListNotifier>(
+                        create: (_) => DeckListNotifier(decks: decks)),
                   ],
                   child: const MenuScreen(),
                 )),

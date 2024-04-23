@@ -39,6 +39,7 @@ dependencies:
   provider: ^6.1.2
   in_app_purchase: ^3.2.0
   flutter_inapp_purchase: ^5.6.1
+  sqflite: ^2.3.3
 
 dev_dependencies:
   flutter_test:

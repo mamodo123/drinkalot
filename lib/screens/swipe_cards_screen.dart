@@ -1,4 +1,5 @@
 import 'dart:math';
+
 import 'package:drinkalot/models/card.dart';
 import 'package:drinkalot/models/deck.dart';
 import 'package:flutter/material.dart';
@@ -73,6 +74,9 @@ class _SwipeCardsScreenState extends State<SwipeCardsScreen> {
                         break;
                       case 'purple':
                         bg = Colors.purple;
+                        break;
+                      case 'green':
+                        bg = Colors.green;
                         break;
                     }
                     return Container(

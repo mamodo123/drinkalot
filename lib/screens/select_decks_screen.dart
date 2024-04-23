@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:drinkalot/models/card.dart';
 import 'package:drinkalot/models/deck.dart';
 import 'package:drinkalot/screens/swipe_cards_screen.dart';
@@ -56,8 +58,22 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
                         setState(() {
                           _loading = true;
                         });
-                        final deckIds = selectedDecks.map((e) => e.id);
-                        final cardList = await getCards(deckIds);
+                        final deckIds = selectedDecks.map((e) => e.id).toList();
+                        final preCardList = await getCards(deckIds);
+                        final List<CardModel> cardList = [];
+                        for (final deck in selectedDecks) {
+                          if (deck.hasBought) {
+                            cardList.addAll(preCardList
+                                .where((element) => element.deck == deck.id));
+                          } else {
+                            final random5 = getRandomElements(
+                                preCardList
+                                    .where((element) => element.deck == deck.id)
+                                    .toList(),
+                                5);
+                            cardList.addAll(random5);
+                          }
+                        }
                         if (context.mounted) {
                           Navigator.push(
                             context,
@@ -102,6 +118,9 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
                     case 'purple':
                       bg = Colors.purple;
                       break;
+                    case 'green':
+                      bg = Colors.green;
+                      break;
                   }
                   return AspectRatio(
                     aspectRatio: 1,
@@ -116,22 +135,46 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
                             });
                           }
                         },
-                        child: Stack(
-                          children: [
-                            Container(
-                              color: bg,
-                            ),
-                            if (decksState[deck] ?? false)
-                              Container(
-                                color: Colors.black.withOpacity(0.8),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.check,
-                                    color: Colors.white,
-                                  ),
+                        child: Container(
+                          color: bg,
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(2),
+                                child: Text(
+                                  deck.title,
+                                  textAlign: TextAlign.center,
                                 ),
-                              )
-                          ],
+                              ),
+                              if (!deck.hasBought)
+                                const Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Text('Trial')),
+                              if (decksState[deck] ?? false)
+                                Container(
+                                  color: Colors.black.withOpacity(0.4),
+                                  child: Center(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        const Icon(
+                                          Icons.check,
+                                          color: Colors.white,
+                                        ),
+                                        if (!deck.hasBought)
+                                          const Text(
+                                            '5 cartas aleatórias',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                      ],
+                                    ),
+                                  ),
+                                )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -141,7 +184,7 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
         ),
         if (_loading)
           Container(
-            color: Colors.black.withOpacity(0.8),
+            color: Colors.black.withOpacity(0.4),
             child: const Center(
               child: CircularProgressIndicator(),
             ),
@@ -149,4 +192,17 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
       ],
     );
   }
+}
+
+List<T> getRandomElements<T>(List<T> list, int n) {
+  final List<T> listCopy = List.from(list);
+  final random = Random();
+  final List<T> selectedElements = [];
+  for (var i = 0; i < n; i++) {
+    final randomIndex = random.nextInt(listCopy.length);
+    selectedElements.add(listCopy[randomIndex]);
+    listCopy.removeAt(randomIndex);
+  }
+
+  return selectedElements;
 }

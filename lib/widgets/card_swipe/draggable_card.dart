@@ -258,10 +258,10 @@ class _DraggableCardState extends State<DraggableCard>
   void _onPanEnd(DragEndDetails details) {
     final dragVector = cardOffset! / cardOffset!.distance;
 
-    final isInLeftRegion = (cardOffset!.dx / context.size!.width) < -0.5;
-    final isInRightRegion = (cardOffset!.dx / context.size!.width) > 0.5;
-    final isInTopRegion = (cardOffset!.dy / context.size!.height) < -0.5;
-    final isInBottomRegion = (cardOffset!.dy / context.size!.height) > 0.5;
+    final isInLeftRegion = (cardOffset!.dx / context.size!.width) < -0.3;
+    final isInRightRegion = (cardOffset!.dx / context.size!.width) > 0.3;
+    final isInTopRegion = (cardOffset!.dy / context.size!.height) < -0.3;
+    final isInBottomRegion = (cardOffset!.dy / context.size!.height) > 0.3;
 
     setState(() {
       if (isInLeftRegion) {

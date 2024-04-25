@@ -90,7 +90,8 @@ class _DecksScreenState extends State<DecksScreen> {
   @override
   Widget build(BuildContext context) {
     final decksNotifier = context.watch<DeckListNotifier>();
-    final decks = decksNotifier.decks;
+    final decks =
+        decksNotifier.decks.where((element) => element.id != -1).toList();
     return FutureBuilder<List<ProductDetails>?>(
         future: products,
         builder: (context, snapshot) {
@@ -141,42 +142,47 @@ class _DecksScreenState extends State<DecksScreen> {
                                     bg = Colors.green;
                                     break;
                                 }
-                                return AspectRatio(
-                                  aspectRatio: 0.64,
-                                  child: SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.9,
-                                    child: Stack(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color: bg,
-                                              borderRadius:
-                                                  BorderRadius.circular(20)),
-                                          alignment: Alignment.center,
-                                          padding: const EdgeInsets.all(10),
-                                          child: Text(
-                                            deck.title,
-                                            style:
-                                                const TextStyle(fontSize: 20),
-                                          ),
-                                        ),
-                                        if (deck.hasBought)
+                                return Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 15.625, horizontal: 10),
+                                  child: AspectRatio(
+                                    aspectRatio: 0.64,
+                                    child: SizedBox(
+                                      width: MediaQuery.of(context).size.width *
+                                          0.9,
+                                      child: Stack(
+                                        children: [
                                           Container(
                                             decoration: BoxDecoration(
-                                                color: Colors.black
-                                                    .withOpacity(0.4),
+                                                color: bg,
                                                 borderRadius:
                                                     BorderRadius.circular(20)),
-                                            child: const Center(
-                                              child: Text(
-                                                'Já adquirido',
-                                                style: TextStyle(
-                                                    color: Colors.white),
-                                              ),
+                                            alignment: Alignment.center,
+                                            padding: const EdgeInsets.all(10),
+                                            child: Text(
+                                              deck.title,
+                                              style:
+                                                  const TextStyle(fontSize: 20),
                                             ),
-                                          )
-                                      ],
+                                          ),
+                                          if (deck.hasBought)
+                                            Container(
+                                              decoration: BoxDecoration(
+                                                  color: Colors.black
+                                                      .withOpacity(0.4),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          20)),
+                                              child: const Center(
+                                                child: Text(
+                                                  'Já adquirido',
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                ),
+                                              ),
+                                            )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 );

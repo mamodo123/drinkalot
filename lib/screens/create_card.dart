@@ -58,48 +58,52 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                           items: cards.map<Widget>((card) {
                             return Builder(
                               builder: (BuildContext context) {
-                                return AspectRatio(
-                                  aspectRatio: 0.64,
-                                  child: SizedBox(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.9,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.green,
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      alignment: Alignment.center,
-                                      padding: const EdgeInsets.all(10),
-                                      child: Stack(
-                                        children: [
-                                          Center(
-                                            child: Text(
-                                              card.description,
-                                              style: const TextStyle(
-                                                  fontSize: 20,
-                                                  color: Colors.white),
+                                return Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 15.625, horizontal: 10),
+                                  child: AspectRatio(
+                                    aspectRatio: 0.64,
+                                    child: SizedBox(
+                                      width: MediaQuery.of(context).size.width *
+                                          0.9,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                            color: Colors.green,
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        alignment: Alignment.center,
+                                        padding: const EdgeInsets.all(10),
+                                        child: Stack(
+                                          children: [
+                                            Center(
+                                              child: Text(
+                                                card.description,
+                                                style: const TextStyle(
+                                                    fontSize: 20,
+                                                    color: Colors.white),
+                                              ),
                                             ),
-                                          ),
-                                          Align(
-                                            alignment: Alignment.topRight,
-                                            child: IconButton(
-                                                onPressed: () async {
-                                                  await createCard(
-                                                      context, card);
-                                                  if (context.mounted) {
-                                                    final cardListNotifier =
-                                                        context.read<
-                                                            DeckListNotifier>();
-                                                    await cardListNotifier
-                                                        .reloadDecks();
-                                                  }
-                                                },
-                                                icon: const Icon(
-                                                  Icons.edit,
-                                                  color: Colors.white,
-                                                )),
-                                          )
-                                        ],
+                                            Align(
+                                              alignment: Alignment.topRight,
+                                              child: IconButton(
+                                                  onPressed: () async {
+                                                    await createCard(
+                                                        context, card);
+                                                    if (context.mounted) {
+                                                      final cardListNotifier =
+                                                          context.read<
+                                                              DeckListNotifier>();
+                                                      await cardListNotifier
+                                                          .reloadDecks();
+                                                    }
+                                                  },
+                                                  icon: const Icon(
+                                                    Icons.edit,
+                                                    color: Colors.white,
+                                                  )),
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -107,24 +111,30 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                               },
                             );
                           }).toList()
-                            ..add(AspectRatio(
-                              aspectRatio: 0.64,
-                              child: SizedBox(
-                                width: MediaQuery.of(context).size.width * 0.9,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(20)),
-                                  alignment: Alignment.center,
-                                  padding: const EdgeInsets.all(10),
-                                  child: IconButton(
-                                    icon: const Icon(
-                                      Icons.add,
-                                      size: 80,
-                                      color: Colors.white,
+                            ..add(Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 15.625, horizontal: 10),
+                              child: AspectRatio(
+                                aspectRatio: 0.64,
+                                child: SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    alignment: Alignment.center,
+                                    padding: const EdgeInsets.all(10),
+                                    child: IconButton(
+                                      icon: const Icon(
+                                        Icons.add,
+                                        size: 80,
+                                        color: Colors.white,
+                                      ),
+                                      onPressed: () async =>
+                                          createCard(context, null),
                                     ),
-                                    onPressed: () async =>
-                                        createCard(context, null),
                                   ),
                                 ),
                               ),

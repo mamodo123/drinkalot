@@ -74,6 +74,7 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
                             cardList.addAll(random5);
                           }
                         }
+                        cardList.shuffle();
                         if (context.mounted) {
                           Navigator.push(
                             context,

@@ -81,8 +81,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Faça um copo para a pessoa mais nova. Se ela não terminar tudo até a sua próxima rodada, ela deve deixar o celular dela desbloqueado com você por 3 minutos'),
+      description: 'Faça um copo para a pessoa mais nova. Se ela não terminar tudo até a sua próxima rodada, ela deve deixar o celular dela desbloqueado com você por 3 minutos'),
   const CardModel(
       id: null,
       deck: 1,
@@ -103,7 +102,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description: 'Eu nunca fiz menáge'),
+      description: 'Eu nunca fiz ménage'),
   const CardModel(
       id: null,
       deck: 1,
@@ -117,8 +116,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'O último a virar o copo deve ficar até a sua próxima rodada de cabeça para baixo'),
+      description: 'O último a virar o copo deve ficar até a sua próxima mexendo a cabeça descontroladamente'),
   const CardModel(
       id: null,
       deck: 0,
@@ -132,15 +130,14 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Escolha duas pessoas para beberem ou uma para beber 2 vezes'),
+      description: 'Escolha duas pessoas para beber ou uma para beber 2 vezes'),
   const CardModel(
       id: null,
       deck: 0,
       title: null,
       help: null,
       imagePath: null,
-      description: 'Eu nunca'),
+      description: 'Faça um "Eu nunca"'),
   const CardModel(
       id: null,
       deck: 0,
@@ -168,56 +165,49 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Deixe o jogador a sua esquerda tirar uma peça de roupa sua'),
+      description: 'Deixe o jogador a sua esquerda tirar uma peça de roupa sua'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Feche os olhos e alguem lhe dá um beijo em alguma parte do corpo. Se não adivinhar quem é, beba 2 vezes'),
+      description: 'Feche os olhos enquanto alguém te dá um beijo em alguma parte do corpo. Se não adivinhar quem foi, beba 2 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Demonstre em algum objeto como se faz um sexo oral. Se não for sexy, bebe 2 vezes'),
+      description: 'Demonstre em algum objeto como se faz um sexo oral. Se não for sexy, beba 2 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Mande um semi-nude e mande para alguém da roda. Se não fizer, beba 5 vezes'),
+      description: 'Mande um semi-nude e mande para alguém da roda. Se não fizer, beba 5 vezes'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Peça para a mesa separar um shot de cada bebida, beba de olhos vendados e descubra qual é qual. Cada uma que errar, você bebe um shot de novo dela'),
+      description: 'Peça para a mesa separar um shot de cada bebida, beba de olhos vendados e descubra qual é qual. Cada uma que errar, você bebe um shot de novo dela'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Misture todos os copos em um, passe a bebida entre a roda até o drink terminar'),
+      description: 'Misture todos os copos em um, passe a bebida entre a roda até o drink terminar'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Finja que sua boca é um copo: a pessoa a sua direita faz um drink diretamente dentro dela'),
+      description: 'Finja que sua boca é um copo: a pessoa a sua direita faz um drink diretamente dentro dela'),
   const CardModel(
       id: null,
       deck: 0,
@@ -238,8 +228,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Simule uma posição sexual com uma pessoa da roda. Se não for convincente, beba 3 vezes'),
+      description: 'Simule uma posição sexual com uma pessoa da roda. Se não for convincente, beba 3 vezes'),
   const CardModel(
       id: null,
       deck: 3,
@@ -260,8 +249,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Não diga nada, bote uma mão na testa e conte até 10. Quem não fizer o mesmo bebe (se todos fizer, o último bebe)'),
+      description: 'Não diga nada, bote uma mão na testa e conte até 10. Quem não fizer o mesmo bebe (se todos fizer, o último bebe)'),
   const CardModel(
       id: null,
       deck: 0,
@@ -310,8 +298,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Tudo que vai, volta! Você pode redirecionar o alvo de alguma carta para outra pessoa'),
+      description: 'Tudo que vai, volta! Você pode redirecionar o alvo de alguma carta para outra pessoa'),
   const CardModel(
       id: null,
       deck: 0,
@@ -325,8 +312,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Sorte no amor, azar no jogo. Até sua próxima rodada, toda vez que um jogador pegar uma carta, jogue uma moeda. Se for cara, você e aquele jogador realizam a ação'),
+      description: 'Sorte no amor, azar no jogo. Até sua próxima rodada, toda vez que um jogador pegar uma carta, jogue uma moeda. Se for cara, você e aquele jogador realizam a ação'),
   const CardModel(
       id: null,
       deck: 0,
@@ -340,32 +326,28 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Crie uma regra. Até sua próxima rodada, quem descumpri-la bebe'),
+      description: 'Crie uma regra. Até sua próxima rodada, quem descumpri-la bebe'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Faça um copo para você. A pessoa mais velha faz também, mas com o dobro de alchool'),
+      description: 'Faça um copo para você. A pessoa mais velha faz também, mas com o dobro de álcool'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Não diga nada e comece a cantar Evidências. Quem não cantar junto, bebe 3 vezes'),
+      description: 'Não diga nada e comece a cantar Evidências. Quem não cantar junto, bebe 3 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'De um selinho em alguém da roda. Beba 1 gole para cada segundo de duração'),
+      description: 'De um selinho em alguém da roda. Beba 1 gole para cada segundo de duração'),
   const CardModel(
       id: null,
       deck: 3,
@@ -379,16 +361,14 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Faça um lap dance para o jogador a sua direita ou beba 5 vezes'),
+      description: 'Faça um lap dance para o jogador a sua direita ou beba 5 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Deixe um jogador dar um chupão em alguma parte do seu corpo ou beba 5 vezes'),
+      description: 'Deixe um jogador dar um chupão em alguma parte do seu corpo ou beba 5 vezes'),
   const CardModel(
       id: null,
       deck: 1,
@@ -458,7 +438,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description: 'Eu nunca fiz realizei um fetiche estranho'),
+      description: 'Eu nunca realizei um fetiche estranho'),
   const CardModel(
       id: null,
       deck: 3,
@@ -472,70 +452,63 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Deixa alguem apertar alguma parte íntima sua ou beba 4 vezes'),
+      description: 'Deixe alguém apertar alguma parte íntima sua ou beba 4 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Chupe o seu dedo e dê para alguém chupar depois. Se a pessoa recusar, ela bebe 2 vezes'),
+      description: 'Chupe o seu dedo e dê para alguém chupar depois. Se a pessoa recusar, ela bebe 2 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Demonstre como seria uma pegada forte no jogador a sua esquerda. Se não for convincente, beba 3 vezes'),
+      description: 'Demonstre como seria uma pegada forte no jogador a sua esquerda. Se não for convincente, beba 3 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description: 'Faça uma massagem sensual no jogador a sua frente'),
+      description: 'Faça uma massagem sensual no jogador à sua frente'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Leia um conto pornô de forma sexy para a roda. Se não for sexy, beba 2 vezes'),
+      description: 'Leia um conto pornô de forma sexy para a roda. Se não for sexy, beba 2 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Conte a sua melhor experiência sexual para a roda. Se alguem contar uma melhor, você bebe 2 vezes'),
+      description: 'Conte a sua melhor experiência sexual para a roda. Se alguem contar uma melhor, você bebe 2 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Mostre como colocar uma camisinha em algum objeto. Se não masturbar ele, beba 2 vezes'),
+      description: 'Mostre como colocar uma camisinha em algum objeto. Se não masturbar ele, beba 2 vezes (?)'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Responda uma pergunta sexual de cada jogador da roda. Beba 1 gole para cada uma que quiser fugir'),
+      description: 'Responda uma pergunta sexual de cada jogador da roda. Beba 1 gole para cada uma que quiser fugir'),
   const CardModel(
       id: null,
       deck: 0,
       title: null,
       help: null,
       imagePath: null,
-      description: 'Cada jogador bebe 1 gole do jogador a sua direita'),
+      description: 'Cada jogador bebe 1 gole do jogador à sua direita'),
   const CardModel(
       id: null,
       deck: 1,
@@ -549,7 +522,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description: 'Eu nunca fiquei com alguém do mesmo gênero que eu'),
+      description: 'Eu nunca fiquei com alguém do mesmo gênero'),
   const CardModel(
       id: null,
       deck: 1,
@@ -563,7 +536,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description: 'Eu nunca fiquei com alguém 10 anos mais velho que eu'),
+      description: 'Eu nunca fiquei com alguém 10 anos mais velho'),
   const CardModel(
       id: null,
       deck: 1,
@@ -619,32 +592,28 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Stop - Escolha um tema e diga uma palavra, quem não conseguir, bebe'),
+      description: 'STOP! Escolha um tema e diga uma palavra, quem não conseguir, bebe'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'A mesa faz um copo para você. Enquanto você não parar de beber, ninguém para. Se alguém parar, você faz o copo daquela pessoa'),
+      description: 'A mesa faz um copo para você. Enquanto você não parar de beber, ninguém para. Se alguém parar, você faz o copo daquela pessoa'),
   const CardModel(
       id: null,
       deck: 0,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Fique de mãos dadas com o jogador a sua direita. Vocês jogam juntos até a sua próxima rodada'),
+      description: 'Fique de mãos dadas com o jogador a sua direita. Vocês jogam juntos até a sua próxima rodada'),
   const CardModel(
       id: null,
       deck: 0,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'A mesa escolhe uma música para você cantar. Se não conseguir, bebe'),
+      description: 'A mesa escolhe uma música para você cantar. Se não conseguir, bebe'),
   const CardModel(
       id: null,
       deck: 0,
@@ -672,128 +641,112 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Escolha uma palavra. Cada um grita a palavra mais alto que o anterior. Quem desistir, bebe. Se ninguém desistir, todos bebem'),
+      description: 'Escolha uma palavra. Cada um grita a palavra mais alto que o anterior. Quem desistir, bebe. Se ninguém desistir, todos bebem'),
   const CardModel(
       id: null,
       deck: 0,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Jogo do cú. Cada jogador vai trocando uma palavra de um filme por cú. Quem não conseguir, bebe'),
+      description: 'Jogo do cú. Cada jogador vai trocando uma palavra de um filme por "cú". Se for sem graça, bebe'),
   const CardModel(
       id: null,
       deck: 0,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'O jogador da sua direita escolhe uma mímica para você fazer. Você tem um minuto para fazer ela, senão bebe'),
+      description: 'O jogador da sua direita escolhe uma mímica para você fazer. Você tem um minuto para fazer ela, senão bebe'),
   const CardModel(
       id: null,
       deck: 0,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Escolha uma cor e conte até 10. Ao final, todos os jogadores tem de estar tocando em algo desta cor, senão bebe. Ninguém pode repetir os objetos'),
+      description: 'Escolha uma cor e conte até 10. Ao final, todos os jogadores tem de estar tocando em algo desta cor, senão bebe. Ninguém pode repetir os objetos'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Mande uma pergunta sexual para alguém no seu celular e diga a resposta para a roda'),
+      description: 'Mande uma pergunta sexual para alguém no seu celular e diga a resposta para a roda'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Sussure no ouvido de alguma pessoa algo sexual que você gostaria de fazer com ela. Se não tiver nada, beba 3 vezes'),
+      description: 'Sussure no ouvido de alguma pessoa algo sexual que você gostaria de fazer com ela. Se não tiver nada, beba 3 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Arrepie alguma pessoa, com palavras no ouvido e com ações. Se não conseguir, bebe'),
+      description: 'Arrepie alguma pessoa, com palavras no ouvido e com ações. Se não conseguir, bebe'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Imite alguma posição do Kamasutra com o jogador a sua esquerda. Se não conseguirem, ambos bebem'),
+      description: 'Imite alguma posição do Kamasutra com o jogador a sua esquerda. Se não conseguirem, ambos bebem'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Faça uma dança sensual em outro jogador. Se não conseguir, beba 2 vezes'),
+      description: 'Faça uma dança sensual em outro jogador. Se não conseguir, beba 2 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Mostre algum sexting que você já teve. Se não tiver nenhum, beba 4 vezes'),
+      description: 'Mostre algum sexting que você já teve. Se não tiver nenhum, beba 4 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Vire de costas e receba um tapa na bunda do jogador a sua frente'),
+      description: 'Vire de costas e receba um tapa na bunda do jogador a sua frente'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Passa-carta. Os jogadores passam uma carta com a boca, segurada apenas pelo vácuo. Quem deixar cair bebe 2 vezes'),
+      description: 'Passa-carta. Os jogadores passam uma carta com a boca, segurada apenas pelo vácuo. Quem deixar cair bebe 2 vezes'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Vale-beijo. Você pode beijar alguém caso vire o seu copo cheio. Esta carta pode ser vendida'),
+      description: 'Vale-beijo. Você pode beijar alguém caso vire o seu copo cheio. Esta carta pode ser vendida'),
   const CardModel(
       id: null,
       deck: 3,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Para cada peça de roupa que você tirar, um jogador beberá 2 vezes'),
+      description: 'Para cada peça de roupa que você tirar, um jogador beberá 2 vezes'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'A mesa faz um shot com 3 ingredientes qualquer. Adivinhe o que tem dentro ou beba mais 2 shots da mesma bebida'),
+      description: 'A mesa faz um shot com 3 ingredientes qualquer. Adivinhe o que tem dentro ou beba mais 2 shots da mesma bebida'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Formem duas equipes. Preparem um copo com até 3 ingredientes para a outra equipe. A equipe que não terminar o seu copo, beberá 3x mais até a próxima rodada de cada jogador'),
+      description: 'Formem duas equipes. Preparem um copo com até 3 ingredientes para a outra equipe. A equipe que não terminar o seu copo, beberá 3x mais até a próxima rodada de cada jogador'),
   const CardModel(
       id: null,
       deck: 2,
@@ -807,16 +760,14 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Formem duas equipes e façam uma batalha de rap. Quem perder, bebe 2 vezes'),
+      description: 'Formem duas equipes e façam uma batalha de rap. Quem perder, bebe 2 vezes'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Mostre a sua galeria para a mesa. Toda vez que alguem quiser clicar em uma foto, ela bebe. Você pode negar bebendo tambem'),
+      description: 'Mostre a sua galeria para a mesa. Toda vez que alguem quiser clicar em uma foto, ela bebe. Você pode negar bebendo tambem'),
   const CardModel(
       id: null,
       deck: 2,
@@ -837,32 +788,28 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Finja ser alguém conhecido. A mesa faz perguntas de sim ou não. Chutou e errou, bebe. Se acertar, todos bebem, menos quem acertou'),
+      description: 'Finja ser alguém conhecido. A mesa faz perguntas de sim ou não. Chutou e errou, bebe. Se acertar, todos bebem, menos quem acertou'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Escolha um objeto a sua vista. A mesa faz perguntas de sim ou não. A cada pergunta, aquela pessoa bebe, até acertarem'),
+      description: 'Escolha um objeto a sua vista. A mesa faz perguntas de sim ou não. A cada pergunta, aquela pessoa bebe, até acertarem'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'A pessoa mais velha faz um drink para a mesa. Ela bebe 2 vezes e o resto bebe 1'),
+      description: 'A pessoa mais velha faz um drink para a mesa. Ela bebe 2 vezes e o resto bebe 1'),
   const CardModel(
       id: null,
       deck: 2,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Escoha uma palavra. Cada pessoa canta um trecho de uma música que tenha aquela palavra. Você bebe junto com cada pessoa que não conseguir'),
+      description: 'Escoha uma palavra. Cada pessoa canta um trecho de uma música que tenha aquela palavra. Você bebe junto com cada pessoa que não conseguir'),
   const CardModel(
       id: null,
       deck: 4,
@@ -904,24 +851,21 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Faça uma cantada para alguém. Se você beijar a pessoa, todos menos você bebem'),
+      description: 'Faça uma cantada para alguém. Se você beijar a pessoa, todos menos você bebem'),
   const CardModel(
       id: null,
       deck: 4,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Inicie uma conversa com alguém fingindo ser outra pessoa que está jogando'),
+      description: 'Inicie uma conversa com alguém fingindo ser outra pessoa que está jogando'),
   const CardModel(
       id: null,
       deck: 4,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Imite um animal! Fique em 4 patas e comece a andar assim no meio da festa'),
+      description: 'Imite um animal! Fique em 4 patas e comece a andar assim no meio da festa'),
   const CardModel(
       id: null,
       deck: 4,
@@ -935,24 +879,21 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Todo mundo mistura os copos, independente do que estejam bebendo'),
+      description: 'Todo mundo mistura os copos, independente do que estejam bebendo'),
   const CardModel(
       id: null,
       deck: 4,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Pra que inimigos se você amigos? O último jogador que jogou faz um copo de bebida para você'),
+      description: 'Pra que inimigos se você amigos? O último jogador que jogou faz um copo de bebida para você'),
   const CardModel(
       id: null,
       deck: 4,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'pinto! PINTO! Um por vez, grite pinto cada vez mais alto com seus amigos. Quem desistir, perde'),
+      description: 'pinto! PINTO! Um por vez, grite pinto cada vez mais alto com seus amigos. Quem desistir, perde'),
   const CardModel(
       id: null,
       deck: 4,
@@ -980,8 +921,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Inicie um grito que todos da festa reconhecem e faça-os gritar com você'),
+      description: 'Inicie um grito que todos da festa reconhecem e faça-os gritar com você'),
   const CardModel(
       id: null,
       deck: 4,
@@ -1023,8 +963,7 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Chegue em alguém aleatório na pista e fale "Por que João, por que você fez isso comigo?"'),
+      description: 'Chegue em alguém aleatório na pista e fale "Por que João, por que você fez isso comigo?"'),
   const CardModel(
       id: null,
       deck: 0,
@@ -1052,22 +991,369 @@ final List<CardModel> cards = [
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Faça alguns shots com e sem alchool. Até a próxima rodada, cada jogador na sua vez toma um shot aleatório'),
+      description: 'Faça alguns shots com e sem alchool. Até a próxima rodada, cada jogador na sua vez toma um shot aleatório'),
   const CardModel(
       id: null,
       deck: 0,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Você é um gringo! Até sua próxima rodada você fala outra língua apenas'),
+      description: 'Você é um gringo! Até sua próxima rodada você fala outra língua apenas'),
   const CardModel(
       id: null,
       deck: 0,
       title: null,
       help: null,
       imagePath: null,
-      description:
-          'Sorria! Você está feliz, e agora não pode parar de sorrir até sua próxima rodada')
+      description: 'Sorria! Você está feliz, e agora não pode parar de sorrir até sua próxima rodada'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca me masturbei com a mão dormente'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiz um Golden Shower'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiz sexo utilizando alimentos e bebidas'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tive a roupa íntima de alguém'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tive um triângulo amoroso'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiz troca de casais'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca transei com um famosinho'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiz dupla penetração'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiz garganta profunda'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fui pego em um local público fazendo sacanagem'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca transei assistindo anime'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca vi pornô gay para ver se não era gay'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca bati punheta pensando na mãe de um amigo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca xinguei durante o sexo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca me masturbei lendo fanfic'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tirei a virgindade de alguém'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca inventei uma desculpa para ir embora depois do sexo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca broxei'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca comprei pílula do dia seguinte'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca comprei teste de gravidez'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca testei camisinha saborizada'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca usei camisinha neon e briquei de Star Wars'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tive uma transa de uma noite'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiz um fio terra'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca errei o nome durante o sexo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca usei o pé durante o sexo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiz Role Play'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca usei dados de sexo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiquei com alguém escondido de todos'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca depilei alguém'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca assisti amigos transando'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca paguei por sexo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca errei o buraco'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fui mordido durante o sexo oral'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tive um sexo com menstruação'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tive um sexo com squirt'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tive ejaculação precoce'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tive sexo com amigos de irmãos'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fingi um orgasmo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tomei banho com alguém da roda'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca tive que pensar em algo broxante para não gozar rápido'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiz meus reclamarem do barulho de sexo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca deixei uma marca de mão na bunda no sexo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca gozei na cara ou tive a cara gozada'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca quebrei a cama durante o sexo'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca provei meus próprios líquidos'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca acessei a deepweeb para ver pornografia'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca paguei por pornografia'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca esqueci pornografia aberta no meu computador'),
+  const CardModel(
+      id: null,
+      deck: 1,
+      title: null,
+      help: null,
+      imagePath: null,
+      description: 'Eu nunca fiz um glory role')
 ];

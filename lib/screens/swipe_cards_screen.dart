@@ -1,7 +1,5 @@
-import 'dart:math';
-
+import 'package:drinkalot/mockup.dart';
 import 'package:drinkalot/models/card.dart';
-import 'package:drinkalot/models/deck.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,33 +13,34 @@ class SwipeCardsScreen extends StatefulWidget {
 }
 
 class _SwipeCardsScreenState extends State<SwipeCardsScreen> {
-  final List<SwipeItem<CardModel>> _swipeItems = [];
+  // final List<SwipeItem<CardModel>> _swipeItems = [];
   late MatchEngine _matchEngine;
 
   @override
   void initState() {
     final cards = context.read<List<CardModel>>();
-    addRandomCardOnSwipe(cards);
-    addRandomCardOnSwipe(cards);
+    // addRandomCardOnSwipe(cards);
+    // addRandomCardOnSwipe(cards);
 
-    _matchEngine = MatchEngine(swipeItems: _swipeItems);
+    _matchEngine = MatchEngine(
+        swipeItems:
+            cards.map((card) => SwipeItem<CardModel>(content: card)).toList());
     super.initState();
   }
 
-  void addRandomCardOnSwipe(List<CardModel> cards) {
-    final random = Random();
-    var index = random.nextInt(cards.length);
-    _swipeItems.add(SwipeItem(
-        content: cards[index],
-        beforeSideAction: () {
-          addRandomCardOnSwipe(cards);
-        }));
-  }
+  // void addRandomCardOnSwipe(List<CardModel> cards) {
+  //   final random = Random();
+  //   var index = random.nextInt(cards.length);
+  //   _swipeItems.add(SwipeItem(
+  //       content: cards[index],
+  //       beforeSideAction: () {
+  //         addRandomCardOnSwipe(cards);
+  //       }));
+  // }
 
   @override
   Widget build(BuildContext context) {
-    final decksNotifier = context.read<DeckListNotifier>();
-    final decks = decksNotifier.decks;
+    final cards = context.watch<List<CardModel>>();
     return Scaffold(
         appBar: AppBar(
           title: const Text('Drinkalot'),
@@ -55,7 +54,7 @@ class _SwipeCardsScreenState extends State<SwipeCardsScreen> {
                 child: SwipeCards(
                   matchEngine: _matchEngine,
                   itemBuilder: (BuildContext context, int index) {
-                    final item = _swipeItems[index].content;
+                    final item = cards[index];
                     final deck =
                         decks.firstWhere((element) => element.id == item.deck);
                     late final Color bg;

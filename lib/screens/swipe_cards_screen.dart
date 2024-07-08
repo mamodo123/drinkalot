@@ -1,9 +1,14 @@
+import 'package:drinkalot/const/colors.dart';
+import 'package:drinkalot/const/consts.dart';
 import 'package:drinkalot/mockup.dart';
 import 'package:drinkalot/models/card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
+import '../functions.dart';
 import '../widgets/card_swipe/swipe_cards.dart';
+import '../widgets/drinkalot/button.dart';
 
 class SwipeCardsScreen extends StatefulWidget {
   const SwipeCardsScreen({super.key});
@@ -43,7 +48,10 @@ class _SwipeCardsScreenState extends State<SwipeCardsScreen> {
     final cards = context.watch<List<CardModel>>();
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Drinkalot'),
+          title: const Text(
+            'Drinkalot',
+            style: TextStyle(color: red, fontFamily: font, fontSize: 40),
+          ),
         ),
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -57,35 +65,37 @@ class _SwipeCardsScreenState extends State<SwipeCardsScreen> {
                     final item = cards[index];
                     final deck =
                         decks.firstWhere((element) => element.id == item.deck);
-                    late final Color bg;
-                    switch (deck.backgroundImage) {
-                      case 'red':
-                        bg = Colors.red;
-                        break;
-                      case 'pink':
-                        bg = Colors.pink;
-                        break;
-                      case 'blue':
-                        bg = Colors.blue;
-                        break;
-                      case 'yellow':
-                        bg = Colors.yellow;
-                        break;
-                      case 'purple':
-                        bg = Colors.purple;
-                        break;
-                      case 'green':
-                        bg = Colors.green;
-                        break;
-                    }
                     return Container(
                       decoration: BoxDecoration(
-                          color: bg, borderRadius: BorderRadius.circular(20)),
+                          border: Border.all(
+                              color: darkenColor(deck.color, .3), width: 5),
+                          color: deck.color,
+                          borderRadius: BorderRadius.circular(20)),
                       alignment: Alignment.center,
-                      padding: const EdgeInsets.all(10),
-                      child: Text(
-                        item.description,
-                        style: const TextStyle(fontSize: 20),
+                      child: Stack(
+                        children: [
+                          if (deck.backgroundImage != null)
+                            SvgPicture.asset(
+                              deck.backgroundImage!,
+                              colorFilter: ColorFilter.mode(
+                                  Colors.white.withOpacity(.15),
+                                  BlendMode.srcIn),
+                            ),
+                          Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(20),
+                              child: Text(
+                                item.description.toUpperCase(),
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                    fontSize: 50,
+                                    color: Colors.white,
+                                    fontFamily: font,
+                                    height: 0.8),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     );
                   },
@@ -95,11 +105,22 @@ class _SwipeCardsScreenState extends State<SwipeCardsScreen> {
                 ),
               ),
             ),
-            ElevatedButton(
-                onPressed: () {
-                  _matchEngine.currentItem?.right();
-                },
-                child: const Text("Próxima"))
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width * 0.1 / 2),
+              child: Row(
+                children: [
+                  // button('<-', () {
+                  //   _matchEngine.currentItem?.right();
+                  // }, 100, 60.0),
+                  Expanded(
+                    child: button('PRÓXIMA', () {
+                      _matchEngine.currentItem?.right();
+                    }, MediaQuery.of(context).size.width * .5, 60.0),
+                  ),
+                ],
+              ),
+            )
           ]),
         ));
   }

@@ -3,12 +3,14 @@ const databaseUpdates = [update001];
 const update001 = [
   """CREATE TABLE IF NOT EXISTS deck
 (
-    id              INTEGER PRIMARY KEY AUTOINCREMENT,
-    title           TEXT    NOT NULL,
-    backgroundImage TEXT,
-    createdByUser   BOOLEAN NOT NULL,
-    playstoreId     TEXT,
-    hasBought       BOOLEAN NOT NULL
+    id                     INTEGER PRIMARY KEY AUTOINCREMENT,
+    title                  TEXT NOT NULL,
+    backgroundImage        TEXT,
+    squaredBackgroundImage TEXT,
+    createdByUser          BOOLEAN NOT NULL,
+    playstoreId            TEXT,
+    hasBought              BOOLEAN NOT NULL,
+    color                  INTEGER NOT NULL
 );""",
   """CREATE TABLE IF NOT EXISTS card
 (

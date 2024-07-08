@@ -4,8 +4,11 @@ import 'package:drinkalot/models/card.dart';
 import 'package:drinkalot/models/deck.dart';
 import 'package:drinkalot/screens/swipe_cards_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
+import '../const/colors.dart';
+import '../const/consts.dart';
 import '../manage_data.dart';
 
 class SelectDecksScreen extends StatefulWidget {
@@ -50,7 +53,10 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
           },
           child: Scaffold(
             appBar: AppBar(
-              title: const Text('Drinkalot'),
+              title: const Text(
+                'Drinkalot',
+                style: TextStyle(color: red, fontFamily: font, fontSize: 40),
+              ),
               actions: [
                 if (selectedDecks.isNotEmpty)
                   TextButton(
@@ -96,91 +102,106 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
                           _loading = false;
                         });
                       },
-                      child: const Text('Jogar'))
+                      child: const Text(
+                        'Jogar',
+                        style: TextStyle(color: red),
+                      ))
               ],
             ),
-            body: GridView.count(
-                crossAxisCount: 3,
-                children: decks.map((deck) {
-                  late final Color bg;
-                  switch (deck.backgroundImage) {
-                    case 'red':
-                      bg = Colors.red;
-                      break;
-                    case 'pink':
-                      bg = Colors.pink;
-                      break;
-                    case 'blue':
-                      bg = Colors.blue;
-                      break;
-                    case 'yellow':
-                      bg = Colors.yellow;
-                      break;
-                    case 'purple':
-                      bg = Colors.purple;
-                      break;
-                    case 'green':
-                      bg = Colors.green;
-                      break;
-                  }
-                  return AspectRatio(
-                    aspectRatio: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: GestureDetector(
-                        onTap: () {
-                          final value = decksState[deck];
-                          if (value != null) {
-                            setState(() {
-                              decksState[deck] = !value;
-                            });
-                          }
-                        },
-                        child: Container(
-                          color: bg,
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(2),
-                                child: Text(
-                                  deck.title,
-                                  textAlign: TextAlign.center,
+            body: Padding(
+              padding: const EdgeInsets.all(10),
+              child: GridView.count(
+                  childAspectRatio: 0.7,
+                  crossAxisCount: 3,
+                  children: decks.map((deck) {
+                    return Column(
+                      children: [
+                        AspectRatio(
+                          aspectRatio: 1,
+                          child: Padding(
+                            padding: const EdgeInsets.all(5),
+                            child: GestureDetector(
+                              onTap: () {
+                                final value = decksState[deck];
+                                if (value != null) {
+                                  setState(() {
+                                    decksState[deck] = !value;
+                                  });
+                                }
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: deck.color,
+                                    borderRadius: BorderRadius.circular(15)),
+                                child: Stack(
+                                  alignment: Alignment.center,
+                                  children: [
+                                    if (deck.squaredBackgroundImage != null)
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(15),
+                                        child: SvgPicture.asset(
+                                            deck.squaredBackgroundImage!,
+                                            colorFilter: ColorFilter.mode(
+                                                Colors.white.withOpacity(.5),
+                                                BlendMode.srcIn)),
+                                      ),
+                                    // Padding(
+                                    //   padding: const EdgeInsets.all(2),
+                                    //   child: Text(
+                                    //     deck.title,
+                                    //     textAlign: TextAlign.center,
+                                    //   ),
+                                    // ),
+                                    if (!deck.hasBought)
+                                      const Align(
+                                          alignment: Alignment.bottomCenter,
+                                          child: Text(
+                                            'Trial',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          )),
+                                    if (decksState[deck] ?? false)
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            color:
+                                                Colors.black.withOpacity(0.4),
+                                            borderRadius:
+                                                BorderRadius.circular(15)),
+                                        child: Center(
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              const Icon(
+                                                Icons.check,
+                                                color: Colors.white,
+                                              ),
+                                              if (!deck.hasBought)
+                                                const Text(
+                                                  textAlign: TextAlign.center,
+                                                  '5 cartas aleatórias',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                  ),
+                                                )
+                                            ],
+                                          ),
+                                        ),
+                                      )
+                                  ],
                                 ),
                               ),
-                              if (!deck.hasBought)
-                                const Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Text('Trial')),
-                              if (decksState[deck] ?? false)
-                                Container(
-                                  color: Colors.black.withOpacity(0.4),
-                                  child: Center(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        const Icon(
-                                          Icons.check,
-                                          color: Colors.white,
-                                        ),
-                                        if (!deck.hasBought)
-                                          const Text(
-                                            '5 cartas aleatórias',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                            ),
-                                          )
-                                      ],
-                                    ),
-                                  ),
-                                )
-                            ],
+                            ),
                           ),
                         ),
-                      ),
-                    ),
-                  );
-                }).toList()),
+                        Text(
+                          deck.title,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(color: darkRed),
+                        )
+                      ],
+                    );
+                  }).toList()),
+            ),
           ),
         ),
         if (_loading)

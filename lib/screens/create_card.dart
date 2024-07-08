@@ -1,12 +1,16 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:drinkalot/const/consts.dart';
 import 'package:drinkalot/models/card.dart';
 import 'package:drinkalot/models/deck.dart';
 import 'package:drinkalot/screens/create_card_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../const/colors.dart';
+import '../functions.dart';
 import '../manage_data.dart';
 import '../models/pair.dart';
+import '../widgets/drinkalot/button.dart';
 
 class CreateCardScreen extends StatefulWidget {
   const CreateCardScreen({super.key});
@@ -44,7 +48,11 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
             } else {
               return Scaffold(
                   appBar: AppBar(
-                    title: const Text('Drinkalot'),
+                    title: const Text(
+                      'Drinkalot',
+                      style:
+                          TextStyle(color: red, fontFamily: font, fontSize: 40),
+                    ),
                   ),
                   body: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -68,7 +76,10 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                                           0.9,
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Colors.green,
+                                            border: Border.all(
+                                                color: darkenColor(red, .3),
+                                                width: 5),
+                                            color: red,
                                             borderRadius:
                                                 BorderRadius.circular(20)),
                                         alignment: Alignment.center,
@@ -79,8 +90,10 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                                               child: Text(
                                                 card.description,
                                                 style: const TextStyle(
-                                                    fontSize: 20,
-                                                    color: Colors.white),
+                                                    fontSize: 50,
+                                                    color: Colors.white,
+                                                    fontFamily: font,
+                                                    height: 0.8),
                                               ),
                                             ),
                                             Align(
@@ -121,7 +134,10 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                                       MediaQuery.of(context).size.width * 0.9,
                                   child: Container(
                                     decoration: BoxDecoration(
-                                        color: Colors.green,
+                                        border: Border.all(
+                                            color: darkenColor(red, .3),
+                                            width: 5),
+                                        color: red,
                                         borderRadius:
                                             BorderRadius.circular(20)),
                                     alignment: Alignment.center,
@@ -140,21 +156,29 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                               ),
                             ))),
                       const SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton(
-                          onPressed: () async {
-                            await carouselController
-                                .animateToPage(cards.length);
-                            if (context.mounted) {
-                              await createCard(context, null);
-                            }
-                          },
-                          child: const Text('Criar')),
-                      const SizedBox(
                         height: 10,
                       ),
-                      Text('${cards.length} cartas criadas')
+                      button(
+                        'CRIAR',
+                        () async {
+                          await carouselController.animateToPage(cards.length);
+                          if (context.mounted) {
+                            await createCard(context, null);
+                          }
+                        },
+                        MediaQuery.of(context).size.width * 0.7,
+                        60,
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        '${cards.length} ${cards.length == 1 ? 'carta criada' : 'cartas criadas'}',
+                        style: const TextStyle(
+                            color: darkRed,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16),
+                      )
                     ],
                   ));
             }

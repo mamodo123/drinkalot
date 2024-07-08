@@ -1,0 +1,1 @@
+const logo = 'assets/images/icone_recorte.svg';

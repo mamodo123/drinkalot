@@ -1,4 +1,5 @@
 import 'package:drinkalot/sqlite.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_inapp_purchase/flutter_inapp_purchase.dart';
 
 import 'models/card.dart';
@@ -34,20 +35,25 @@ Future<List<CardModel>> getCards(List<int> deckIds) async {
 
 Future<List<String>> loadPurchasedProducts(List<Deck> decks) async {
   final List<String> ids = [];
-  await FlutterInappPurchase.instance.initialize();
-  final decksIds = decks
-      .map((e) => e.playstoreId)
-      .where((element) => element != null)
-      .map((e) => e!);
-  final list = await FlutterInappPurchase.instance.getPurchaseHistory();
-  if (list != null) {
-    for (final product in list) {
-      if (product.productId != null && decksIds.contains(product.productId)) {
-        ids.add(product.productId!);
+  try {
+    await FlutterInappPurchase.instance.initialize();
+    final decksIds = decks
+        .map((e) => e.playstoreId)
+        .where((element) => element != null)
+        .map((e) => e!);
+    final list = await FlutterInappPurchase.instance.getPurchaseHistory();
+    if (list != null) {
+      for (final product in list) {
+        if (product.productId != null && decksIds.contains(product.productId)) {
+          ids.add(product.productId!);
+        }
       }
     }
+    return ids;
+  } catch (e) {
+    debugPrint(e.toString());
+    return [];
   }
-  return ids;
 }
 
 Future<void> buyDeck(String code) async {

@@ -4,34 +4,41 @@ import 'package:flutter/cupertino.dart';
 class Deck {
   final int id;
   final String title;
-  final String? backgroundImage;
+  final String? backgroundImage, squaredBackgroundImage;
   final bool createdByUser;
   final String? playstoreId;
+  final Color color;
   bool hasBought;
 
   Deck(
       {required this.id,
       required this.title,
       required this.backgroundImage,
+      required this.squaredBackgroundImage,
       required this.createdByUser,
       required this.hasBought,
-      required this.playstoreId});
+      required this.playstoreId,
+      required this.color});
 
   Deck.fromJson(Map<String, dynamic> json)
       : id = json['id'],
         title = json['title'],
         backgroundImage = json['backgroundImage'],
+        squaredBackgroundImage = json['squaredBackgroundImage'],
         createdByUser = json['createdByUser'] == 1,
         hasBought = json['hasBought'] == 1,
-        playstoreId = json['playstoreId'];
+        playstoreId = json['playstoreId'],
+        color = Color(json['color'] as int);
 
   Map<String, dynamic> toJson() => {
         'id': id,
         'title': title,
         'backgroundImage': backgroundImage,
+        'squaredBackgroundImage': squaredBackgroundImage,
         'createdByUser': createdByUser,
         'hasBought': hasBought,
         'playstoreId': playstoreId,
+        'color': color.value,
       };
 }
 

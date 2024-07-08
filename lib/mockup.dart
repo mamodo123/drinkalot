@@ -1,3 +1,6 @@
+import 'package:drinkalot/const/colors.dart';
+import 'package:flutter/material.dart';
+
 import 'models/card.dart';
 import 'models/deck.dart';
 
@@ -5,45 +8,57 @@ final List<Deck> decks = [
   Deck(
       id: 0,
       title: 'Clássicas',
-      backgroundImage: 'red',
+      backgroundImage: 'assets/images/classic.svg',
+      squaredBackgroundImage: 'assets/images/classic_squared.svg',
       createdByUser: false,
       hasBought: true,
-      playstoreId: null),
+      playstoreId: null,
+      color: const Color(0xFFff5757)),
   Deck(
       id: 1,
       title: 'Eu Nunca Picante',
-      backgroundImage: 'pink',
+      backgroundImage: 'assets/images/have_i_never_spice.svg',
+      squaredBackgroundImage: 'assets/images/have_i_never_spice_squared.svg',
       createdByUser: false,
       hasBought: false,
-      playstoreId: 'have_i_never_spice'),
+      playstoreId: 'have_i_never_spice',
+      color: const Color(0xFFff66c4)),
   Deck(
       id: 2,
-      title: 'Para deixar muito bebado',
-      backgroundImage: 'blue',
+      title: 'Para deixar muito bêbado',
+      backgroundImage: 'assets/images/to_get_very_drunk.svg',
+      squaredBackgroundImage: 'assets/images/to_get_very_drunk_squared.svg',
       createdByUser: false,
       hasBought: false,
-      playstoreId: 'to_get_very_drunk'),
+      playstoreId: 'to_get_very_drunk',
+      color: const Color(0xFFcb6ce6)),
   Deck(
       id: 3,
       title: 'Sexual',
-      backgroundImage: 'yellow',
+      backgroundImage: 'assets/images/sexual.svg',
+      squaredBackgroundImage: 'assets/images/sexual_squared.svg',
       createdByUser: false,
       hasBought: false,
-      playstoreId: 'sexual'),
+      playstoreId: 'sexual',
+      color: const Color(0xFF8c52ff)),
   Deck(
       id: 4,
       title: 'Desafios de festa',
-      backgroundImage: 'purple',
+      backgroundImage: 'assets/images/party_challenges.svg',
+      squaredBackgroundImage: 'assets/images/party_challenges_squared.svg',
       createdByUser: false,
       hasBought: false,
-      playstoreId: 'party_challenges'),
+      playstoreId: 'party_challenges',
+      color: const Color(0xFF5e17eb)),
   Deck(
       id: -1,
       title: 'Minhas cartas',
-      backgroundImage: 'green',
+      backgroundImage: 'assets/images/my_cards.svg',
+      squaredBackgroundImage: 'assets/images/my_cards_squared.svg',
       createdByUser: true,
       hasBought: true,
-      playstoreId: null)
+      playstoreId: null,
+      color: red)
 ];
 
 final List<CardModel> cards = [

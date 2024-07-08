@@ -3,8 +3,13 @@ import 'dart:async';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:drinkalot/models/deck.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:provider/provider.dart';
+
+import '../const/colors.dart';
+import '../const/consts.dart';
+import '../functions.dart';
 
 class DecksScreen extends StatefulWidget {
   const DecksScreen({super.key});
@@ -103,7 +108,11 @@ class _DecksScreenState extends State<DecksScreen> {
             } else {
               return Scaffold(
                   appBar: AppBar(
-                    title: const Text('Drinkalot'),
+                    title: const Text(
+                      'Drinkalot',
+                      style:
+                          TextStyle(color: red, fontFamily: font, fontSize: 40),
+                    ),
                   ),
                   body: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -121,27 +130,6 @@ class _DecksScreenState extends State<DecksScreen> {
                           items: decks.map((deck) {
                             return Builder(
                               builder: (BuildContext context) {
-                                late final Color bg;
-                                switch (deck.backgroundImage) {
-                                  case 'red':
-                                    bg = Colors.red;
-                                    break;
-                                  case 'pink':
-                                    bg = Colors.pink;
-                                    break;
-                                  case 'blue':
-                                    bg = Colors.blue;
-                                    break;
-                                  case 'yellow':
-                                    bg = Colors.yellow;
-                                    break;
-                                  case 'purple':
-                                    bg = Colors.purple;
-                                    break;
-                                  case 'green':
-                                    bg = Colors.green;
-                                    break;
-                                }
                                 return Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 15.625, horizontal: 10),
@@ -154,15 +142,46 @@ class _DecksScreenState extends State<DecksScreen> {
                                         children: [
                                           Container(
                                             decoration: BoxDecoration(
-                                                color: bg,
+                                                border: Border.all(
+                                                    color: darkenColor(
+                                                        deck.color, .3),
+                                                    width: 5),
+                                                color: deck.color,
                                                 borderRadius:
                                                     BorderRadius.circular(20)),
                                             alignment: Alignment.center,
-                                            padding: const EdgeInsets.all(10),
-                                            child: Text(
-                                              deck.title,
-                                              style:
-                                                  const TextStyle(fontSize: 20),
+                                            child: Stack(
+                                              children: [
+                                                if (deck.backgroundImage !=
+                                                    null)
+                                                  SvgPicture.asset(
+                                                    deck.backgroundImage!,
+                                                    colorFilter:
+                                                        ColorFilter.mode(
+                                                            Colors
+                                                                .white
+                                                                .withOpacity(
+                                                                    .15),
+                                                            BlendMode.srcIn),
+                                                  ),
+                                                Center(
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            10),
+                                                    child: Text(
+                                                      deck.title,
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style: const TextStyle(
+                                                          fontSize: 40,
+                                                          color: Colors.white,
+                                                          fontFamily: font,
+                                                          height: 0.8),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                           if (deck.hasBought)
@@ -174,10 +193,18 @@ class _DecksScreenState extends State<DecksScreen> {
                                                       BorderRadius.circular(
                                                           20)),
                                               child: const Center(
-                                                child: Text(
-                                                  'Já adquirido',
-                                                  style: TextStyle(
-                                                      color: Colors.white),
+                                                child: Padding(
+                                                  padding: EdgeInsets.only(
+                                                      bottom: 20),
+                                                  child: Align(
+                                                    alignment:
+                                                        Alignment.bottomCenter,
+                                                    child: Text(
+                                                      'Já adquirido',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
                                             )

@@ -5,10 +5,12 @@ import 'package:drinkalot/models/deck.dart';
 import 'package:drinkalot/screens/swipe_cards_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '../const/colors.dart';
 import '../const/consts.dart';
+import '../const/utils.dart';
 import '../manage_data.dart';
 
 class SelectDecksScreen extends StatefulWidget {
@@ -53,9 +55,9 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
           },
           child: Scaffold(
             appBar: AppBar(
-              title: const Text(
+              title: Text(
                 'Drinkalot',
-                style: TextStyle(color: red, fontFamily: font, fontSize: 40),
+                style: appNameTextStyle(red, 40),
               ),
               actions: [
                 if (selectedDecks.isNotEmpty)
@@ -156,9 +158,9 @@ class _SelectDecksScreenState extends State<SelectDecksScreen> {
                                       const Align(
                                           alignment: Alignment.bottomCenter,
                                           child: Text(
-                                            'Trial',
+                                            'Teste',
                                             style:
-                                                TextStyle(color: Colors.white),
+                                                TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
                                           )),
                                     if (decksState[deck] ?? false)
                                       Container(

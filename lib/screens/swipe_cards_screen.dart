@@ -1,9 +1,11 @@
 import 'package:drinkalot/const/colors.dart';
 import 'package:drinkalot/const/consts.dart';
+import 'package:drinkalot/const/utils.dart';
 import 'package:drinkalot/mockup.dart';
 import 'package:drinkalot/models/card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '../functions.dart';
@@ -48,9 +50,9 @@ class _SwipeCardsScreenState extends State<SwipeCardsScreen> {
     final cards = context.watch<List<CardModel>>();
     return Scaffold(
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             'Drinkalot',
-            style: TextStyle(color: red, fontFamily: font, fontSize: 40),
+            style: appNameTextStyle(red, 40),
           ),
         ),
         body: Center(
@@ -87,11 +89,7 @@ class _SwipeCardsScreenState extends State<SwipeCardsScreen> {
                               child: Text(
                                 item.description.toUpperCase(),
                                 textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                    fontSize: 50,
-                                    color: Colors.white,
-                                    fontFamily: font,
-                                    height: 0.8),
+                                style: cardTextStyle(Colors.white, 50, height: 0.8),
                               ),
                             ),
                           ),

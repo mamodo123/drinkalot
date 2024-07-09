@@ -1,6 +1,7 @@
 import 'package:drinkalot/screens/create_card.dart';
 import 'package:drinkalot/screens/decks_screen.dart';
 import 'package:drinkalot/screens/select_decks_screen.dart';
+import 'package:drinkalot/screens/tutorial_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shakemywidget/flutter_shakemywidget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,7 +15,6 @@ import 'code_dialog.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
-
   @override
   State<MenuScreen> createState() => _MenuScreenState();
 }
@@ -140,6 +140,21 @@ class _MenuScreenState extends State<MenuScreen> {
                                 value: decksNotifier,
                                 child: const CreateCardScreen(),
                               )));
+                },
+                width,
+                height,
+              ),
+              button(
+                'TUTORIAL',
+                    () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          ChangeNotifierProvider<DeckListNotifier>.value(
+                            value: decksNotifier,
+                            child: const TutorialScreen(),
+                          )));
                 },
                 width,
                 height,

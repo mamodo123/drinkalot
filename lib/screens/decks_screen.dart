@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 
 import '../const/colors.dart';
 import '../const/consts.dart';
+import '../const/utils.dart';
 import '../functions.dart';
 
 class DecksScreen extends StatefulWidget {
@@ -109,10 +110,9 @@ class _DecksScreenState extends State<DecksScreen> {
             } else {
               return Scaffold(
                   appBar: AppBar(
-                    title: const Text(
+                    title: Text(
                       'Drinkalot',
-                      style:
-                          TextStyle(color: red, fontFamily: font, fontSize: 40),
+                      style: appNameTextStyle(red, 40),
                     ),
                   ),
                   body: Column(
@@ -174,11 +174,7 @@ class _DecksScreenState extends State<DecksScreen> {
                                                       deck.title,
                                                       textAlign:
                                                           TextAlign.center,
-                                                      style: const TextStyle(
-                                                          fontSize: 40,
-                                                          color: Colors.white,
-                                                          fontFamily: font,
-                                                          height: 0.8),
+                                                      style: mainTextStyle(Colors.white, 40, height: 0.8)
                                                     ),
                                                   ),
                                                 ),

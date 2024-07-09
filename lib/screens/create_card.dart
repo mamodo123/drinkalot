@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../const/colors.dart';
+import '../const/utils.dart';
 import '../functions.dart';
 import '../manage_data.dart';
 import '../models/pair.dart';
@@ -48,10 +49,10 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
             } else {
               return Scaffold(
                   appBar: AppBar(
-                    title: const Text(
+                    title: Text(
                       'Drinkalot',
                       style:
-                          TextStyle(color: red, fontFamily: font, fontSize: 40),
+                        appNameTextStyle(red, 40),
                     ),
                   ),
                   body: Column(
@@ -92,12 +93,8 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                                             children: [
                                               Center(
                                                 child: Text(
-                                                  card.description,
-                                                  style: const TextStyle(
-                                                      fontSize: 50,
-                                                      color: Colors.white,
-                                                      fontFamily: font,
-                                                      height: 0.8),
+                                                  card.description.toUpperCase(),
+                                                  style: cardTextStyle(Colors.white, 50, height: 0.8),
                                                 ),
                                               ),
                                               Align(
@@ -142,7 +139,7 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                                       alignment: Alignment.center,
                                       padding: const EdgeInsets.all(10),
                                       child: const Icon(
-                                        Icons.add,
+                                        Icons.add_rounded,
                                         size: 80,
                                         color: Colors.white,
                                       ),

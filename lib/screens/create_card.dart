@@ -71,51 +71,48 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                                       vertical: 15.625, horizontal: 10),
                                   child: AspectRatio(
                                     aspectRatio: 0.64,
-                                    child: SizedBox(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.9,
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: darkenColor(red, .3),
-                                                width: 5),
-                                            color: red,
-                                            borderRadius:
-                                                BorderRadius.circular(20)),
-                                        alignment: Alignment.center,
-                                        padding: const EdgeInsets.all(10),
-                                        child: Stack(
-                                          children: [
-                                            Center(
-                                              child: Text(
-                                                card.description,
-                                                style: const TextStyle(
-                                                    fontSize: 50,
-                                                    color: Colors.white,
-                                                    fontFamily: font,
-                                                    height: 0.8),
+                                    child: GestureDetector(
+                                      onDoubleTap: () async =>
+                                          await editCard(context, card),
+                                      child: SizedBox(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.9,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: darkenColor(red, .3),
+                                                  width: 5),
+                                              color: red,
+                                              borderRadius:
+                                                  BorderRadius.circular(20)),
+                                          alignment: Alignment.center,
+                                          padding: const EdgeInsets.all(10),
+                                          child: Stack(
+                                            children: [
+                                              Center(
+                                                child: Text(
+                                                  card.description,
+                                                  style: const TextStyle(
+                                                      fontSize: 50,
+                                                      color: Colors.white,
+                                                      fontFamily: font,
+                                                      height: 0.8),
+                                                ),
                                               ),
-                                            ),
-                                            Align(
-                                              alignment: Alignment.topRight,
-                                              child: IconButton(
-                                                  onPressed: () async {
-                                                    await createCard(
-                                                        context, card);
-                                                    if (context.mounted) {
-                                                      final cardListNotifier =
-                                                          context.read<
-                                                              DeckListNotifier>();
-                                                      await cardListNotifier
-                                                          .reloadDecks();
-                                                    }
-                                                  },
-                                                  icon: const Icon(
-                                                    Icons.edit,
-                                                    color: Colors.white,
-                                                  )),
-                                            )
-                                          ],
+                                              Align(
+                                                alignment: Alignment.topRight,
+                                                child: IconButton(
+                                                    onPressed: () async =>
+                                                        await editCard(
+                                                            context, card),
+                                                    icon: const Icon(
+                                                      Icons.edit,
+                                                      color: Colors.white,
+                                                    )),
+                                              )
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -129,27 +126,26 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
                                   vertical: 15.625, horizontal: 10),
                               child: AspectRatio(
                                 aspectRatio: 0.64,
-                                child: SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.9,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        border: Border.all(
-                                            color: darkenColor(red, .3),
-                                            width: 5),
-                                        color: red,
-                                        borderRadius:
-                                            BorderRadius.circular(20)),
-                                    alignment: Alignment.center,
-                                    padding: const EdgeInsets.all(10),
-                                    child: IconButton(
-                                      icon: const Icon(
+                                child: GestureDetector(
+                                  onTap: () => createCard(context, null),
+                                  child: SizedBox(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.9,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: darkenColor(red, .3),
+                                              width: 5),
+                                          color: red,
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      alignment: Alignment.center,
+                                      padding: const EdgeInsets.all(10),
+                                      child: const Icon(
                                         Icons.add,
                                         size: 80,
                                         color: Colors.white,
                                       ),
-                                      onPressed: () async =>
-                                          createCard(context, null),
                                     ),
                                   ),
                                 ),
@@ -212,6 +208,14 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
         final cardListNotifier = context.read<DeckListNotifier>();
         await cardListNotifier.reloadDecks();
       }
+    }
+  }
+
+  Future<void> editCard(BuildContext context, CardModel card) async {
+    await createCard(context, card);
+    if (context.mounted) {
+      final cardListNotifier = context.read<DeckListNotifier>();
+      await cardListNotifier.reloadDecks();
     }
   }
 }

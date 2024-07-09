@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:drinkalot/models/deck.dart';
+import 'package:drinkalot/widgets/drinkalot/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
@@ -219,21 +220,24 @@ class _DecksScreenState extends State<DecksScreen> {
                       const SizedBox(
                         height: 20,
                       ),
-                      ElevatedButton(
-                          onPressed: decks[_currentIndex].hasBought
-                              ? null
-                              : () async {
-                                  final productDetails = snapshot.data!
-                                      .firstWhere((element) =>
-                                          element.id ==
-                                          decks[_currentIndex].playstoreId);
-                                  final PurchaseParam purchaseParam =
-                                      PurchaseParam(
-                                          productDetails: productDetails);
-                                  await InAppPurchase.instance.buyConsumable(
-                                      purchaseParam: purchaseParam);
-                                },
-                          child: const Text('Comprar'))
+                      button(
+                        'COMPRAR',
+                        decks[_currentIndex].hasBought
+                            ? null
+                            : () async {
+                                final productDetails = snapshot.data!
+                                    .firstWhere((element) =>
+                                        element.id ==
+                                        decks[_currentIndex].playstoreId);
+                                final PurchaseParam purchaseParam =
+                                    PurchaseParam(
+                                        productDetails: productDetails);
+                                await InAppPurchase.instance.buyConsumable(
+                                    purchaseParam: purchaseParam);
+                              },
+                        MediaQuery.of(context).size.width * .75,
+                        60.0,
+                      )
                     ],
                   ));
             }

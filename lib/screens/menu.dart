@@ -79,13 +79,12 @@ class _MenuScreenState extends State<MenuScreen> {
                 },
                 child: ShakeMe(
                   key: shakeKey,
-                  // 5. configure the animation parameters
                   shakeCount: 3,
                   shakeOffset: 10,
                   shakeDuration: const Duration(milliseconds: 500),
                   child: SvgPicture.asset(
                     logo,
-                    width: MediaQuery.of(context).size.width * .5,
+                    width: MediaQuery.of(context).size.width * .4,
                   ),
                 ),
               ),
